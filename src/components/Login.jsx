@@ -27,7 +27,7 @@ const Login = () => {
             localStorage.setItem("token", data.token);
             localStorage.setItem("user", JSON.stringify(data.user));
 
-            alert("Login successful!");
+            // alert("Login successful!");
 
             // Check if the user is an admin
             if (data.user.isAdmin) {
