@@ -1,0 +1,113 @@
+/* home.css */
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+.Home-container {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    color: inherit;
+    text-align: center;
+    overflow: hidden; /* Prevent scrolling */
+    position: fixed; /* Fix to screen */
+    top: 0;
+    left: 0;
+}
+
+.Home-content {
+    background-color: rgba(242, 237, 235, 0.432);
+    width: 90%;
+    max-width: 600px;
+    padding: 40px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px); /* Frosted Glass Effect */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.Home-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.Home-content h1 span {
+    color: inherit;
+}
+
+.Home-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.Button-group {
+    display: flex;
+    justify-content: center;
+}
+
+.Start-quiz {
+    background-color: rgb(226, 159, 43);
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.Start-quiz:hover {
+    transform: scale(1.05);
+}
+
+/* 🔹 Responsive Design */
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+    .Home-content {
+        max-width: 85%;
+        padding: 30px;
+    }
+
+    .Home-content h1 {
+        font-size: 2rem;
+    }
+
+    .Home-content p {
+        font-size: 1rem;
+    }
+
+    .Start-quiz {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+    .Home-container {
+        padding: 10px;
+    }
+
+    .Home-content {
+        padding: 20px;
+    }
+
+    .Home-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .Home-content p {
+        font-size: 0.9rem;
+    }
+
+    .Start-quiz {
+        font-size: 0.9rem;
+        padding: 8px 18px;
+    }
+}

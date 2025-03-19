@@ -1,0 +1,119 @@
+/* Navbar Styles */
+.Homenavbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 1rem 2rem;
+    width: 100vw; /* Ensures it spans the entire width */
+    height: 70px; /* Fixed height for consistency */
+    box-sizing: border-box;
+    position: fixed; /* Keeps the navbar fixed on top */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensures it stays above other content */
+}
+
+.Navtitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.Navlinks {
+    display: flex;
+    align-items: center;
+}
+
+.Navbutton.logout {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.Navbutton.logout:hover {
+    background-color: darkred;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Mobile (up to 600px) */
+@media (max-width: 600px) {
+    .Homenavbar {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        height: auto;
+        padding: 1rem 1rem; /* Reduced padding for smaller screens */
+    }
+
+    .Navtitle {
+        font-size: 1.2rem;
+    }
+
+    .Navlinks {
+        width: 100%;
+        justify-content: center; /* Center the links */
+        margin-top: 10px;
+    }
+
+    .Navbutton.logout {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+        margin-top: 8px;
+    }
+}
+
+/* Tablet (601px - 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .Homenavbar {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+    }
+
+    .Navtitle {
+        font-size: 1.3rem;
+    }
+
+    .Navlinks {
+        display: flex;
+        align-items: center;
+        gap: 20px; /* Space out the links */
+    }
+
+    .Navbutton.logout {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}
+
+/* Desktop (1025px and above) */
+@media (min-width: 1025px) {
+    .Homenavbar {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem 3rem; /* Increased padding for larger screens */
+    }
+
+    .Navtitle {
+        font-size: 1.5rem;
+    }
+
+    .Navlinks {
+        display: flex;
+        align-items: center;
+        gap: 25px; /* Larger gap between links */
+    }
+
+    .Navbutton.logout {
+        font-size: 1.1rem;
+        padding: 10px 20px;
+    }
+}

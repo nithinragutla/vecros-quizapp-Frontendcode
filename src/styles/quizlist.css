@@ -1,0 +1,189 @@
+/* Basic Styles */
+#quiz-container {
+    margin-top: 80px; /* Adjust based on navbar height */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center; /* Vertically centers the quiz container */
+    align-items: center; /* Horizontally centers the quiz container */
+  }
+  
+  .quiz-card {
+    background-color: #ffffff48;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px; /* Set a fixed width for the quiz card */
+    margin: 10px 0; /* Ensure there's some margin between cards */
+  }
+  
+  .quiz-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    color: #ffb700;
+    margin-bottom: 10px;
+  }
+  
+  .question-box {
+    background-color: #edc9c9be;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 15px;
+  }
+  
+  .edit-mode {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .edit-input {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  .save-btn, .cancel-btn {
+    padding: 8px 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .save-btn {
+    background-color: #28a745;
+  }
+  
+  .cancel-btn {
+    background-color: #dc3545;
+  }
+  
+  .save-btn:hover, .cancel-btn:hover {
+    opacity: 0.8;
+  }
+  
+  .button-group {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .edit-btn, .delete-btn {
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .edit-btn {
+    background-color: #ffc107;
+  }
+  
+  .delete-btn {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .edit-btn:hover, .delete-btn:hover {
+    opacity: 0.8;
+  }
+  
+  .loading {
+    font-size: 1.2rem;
+    color: #007bff;
+  }
+  
+  .error {
+    color: red;
+  }
+  
+  .no-quizzes {
+    font-size: 1.2rem;
+    color: #6c757d;
+  }
+  
+  /* Media Queries for Responsiveness */
+  
+  /* Mobile Devices (max-width: 767px) */
+  @media (max-width: 767px) {
+    #quiz-container {
+      padding: 20px;
+      margin-top: 120px;
+    }
+  
+    .quiz-card {
+      padding: 15px;
+      width: 90%; /* Make the cards take up most of the screen width */
+    }
+  
+    .quiz-title {
+      font-size: 1.3rem;
+    }
+  
+    .edit-input {
+      font-size: 0.9rem;
+    }
+  
+    .save-btn, .cancel-btn, .edit-btn, .delete-btn {
+      padding: 6px 10px;
+      font-size: 0.9rem;
+    }
+  
+    .button-group {
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+  
+  /* Tablet Devices (max-width: 1024px) */
+  @media (max-width: 1024px) {
+    #quiz-container {
+      padding: 15px;
+    }
+  
+    .quiz-card {
+      padding: 18px;
+      width: 80%; /* Adjust card width for tablet */
+    }
+  
+    .quiz-title {
+      font-size: 1.4rem;
+    }
+  
+    .button-group {
+      gap: 12px;
+    }
+  }
+  
+  /* Larger Screens / Desktops (min-width: 1025px) */
+  @media (min-width: 1025px) {
+    #quiz-container {
+      padding: 20px;
+      justify-content: flex-start; /* Align items to the top for larger screens */
+      align-items: center; /* Keep quiz cards centered horizontally */
+    }
+  
+    .quiz-card {
+      padding: 25px;
+      width: 300px; /* Set a fixed width for desktop */
+    }
+  
+    .quiz-title {
+      font-size: 1.5rem;
+    }
+  
+    .button-group {
+      gap: 15px;
+    }
+  }
+  

@@ -1,0 +1,92 @@
+/* Leaderboard.css */
+.leaderboard-wrapper {
+    font-family: Arial, sans-serif;
+    padding: 70px 20px; /* Adjust padding on mobile */
+    box-sizing: border-box; /* Ensure padding does not cause overflow */
+}
+
+.leaderboard-containers {
+    background-color: #ddddddb0;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; /* Allow horizontal scrolling if necessary */
+}
+
+.leaderboard-headings {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.leaderboard-tables {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto; /* Let table columns adjust automatically */
+}
+
+.leaderboard-tables th, .leaderboard-tables td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.leaderboard-tables th {
+    color: #333;
+}
+
+.leaderboard-tables td {
+    color: #333;
+}
+
+.leaderboard-tables tr:hover {
+    background-color: #f9f9f9; /* Light hover effect */
+}
+
+/* Media Query for Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    .leaderboard-wrapper {
+        padding: 20px;
+    }
+
+    .leaderboard-containers {
+        padding: 15px;
+    }
+
+    .leaderboard-headings {
+        font-size: 1.5rem;
+    }
+
+    .leaderboard-tables th, .leaderboard-tables td {
+        padding: 10px;
+    }
+}
+
+/* Media Query for Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .leaderboard-wrapper {
+        margin-top: 80px;
+        padding: 50px; /* Ensure padding is consistent */
+    }
+
+    .leaderboard-headings {
+        font-size: 1.3rem;
+    }
+
+    .leaderboard-tables th, .leaderboard-tables td {
+        padding: 8px; /* Adjust padding for mobile */
+    }
+
+    .leaderboard-tables {
+        font-size: 0.9rem;
+        overflow-x: auto; /* Ensure the table is scrollable on smaller screens */
+    }
+
+    .leaderboard-tables th, .leaderboard-tables td {
+        white-space: nowrap; /* Prevent text from wrapping */
+    }
+}

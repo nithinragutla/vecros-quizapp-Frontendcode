@@ -1,0 +1,132 @@
+/* Gradient background for admin registration page */
+.admin-register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    /* background: linear-gradient(to right);  */
+    padding: 20px;
+}
+
+/* Styling for the admin registration box */
+.admin-register-box {
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent effect */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.admin-register-box h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Input field styling */
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+#pass{
+    width: 92%;
+}
+#user{
+    width: 92%;
+}
+
+/* Admin Register Button */
+.admin-register-button {
+    width: 70%;
+    padding: 10px;
+    background: linear-gradient(to right, #9b59b6, #6c5ce7); /* Purple Button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease-in-out;
+}
+
+.admin-register-button:hover {
+    background: linear-gradient(to right, #6c5ce7, #4834d4);
+}
+
+/* Error and Success Messages */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.success-message {
+    color: green;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+
+/* ✅ Mobile Styles (max-width: 600px) */
+@media (max-width: 600px) {
+    .admin-register-box {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .input-group input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .admin-register-button {
+        font-size: 16px;
+        padding: 8px;
+    }
+}
+
+/* ✅ Tablet Styles (601px - 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .admin-register-box {
+        max-width: 350px;
+        padding: 25px;
+    }
+
+    .input-group input {
+        font-size: 15px;
+        padding: 9px;
+    }
+
+    .admin-register-button {
+        font-size: 17px;
+        padding: 9px;
+    }
+}
+
+/* ✅ Desktop Styles (1025px and above) */
+@media (min-width: 1025px) {
+    .admin-register-box {
+        max-width: 400px;
+    }
+
+    .admin-register-button {
+        transition: background 0.3s ease-in-out;
+    }
+}

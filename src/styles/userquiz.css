@@ -1,0 +1,197 @@
+/* Container for the entire quiz page */
+.quiz-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 80vh;
+    padding-top: 70px; /* Default padding for larger screens */
+}
+
+/* Content wrapper */
+.quiz-content {
+    background-color: rgba(233, 230, 229, 0.307);
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* List of quiz titles */
+.quiz-title-list {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.quiz-title-item {
+    background-color: rgba(16, 16, 16, 0.085);
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-weight: bold;
+}
+
+.quiz-title-item:hover {
+    background-color: #b2abab;
+}
+
+/* Quiz section */
+.quiz-section {
+    text-align: center;
+}
+
+.quiz-title {
+    margin-bottom: 20px;
+}
+
+/* Individual questions */
+.quiz-question {
+    background-color: rgba(240, 189, 153, 0.83);
+    padding: 18px; /* Increased padding */
+    margin: 10px 0;
+    border-radius: 5px;
+    text-align: left;
+}
+
+/* Question text */
+.question-text {
+    font-weight: bold;
+}
+
+/* Option styles */
+.option-label {
+    display: block;
+    margin: 8px 0;
+    cursor: pointer;
+}
+
+.quiz-input {
+    margin-right: 8px;
+}
+
+/* Button container */
+.quiz-buttons {
+    display: flex;
+    justify-content: center; /* Center the buttons */
+    gap: 30px; /* Adjust the gap between buttons */
+    margin-top: 20px;
+    width: 100%; /* Full width container */
+}
+
+/* Buttons */
+.submit-button,
+.back-button {
+    padding: 5px 5px; /* Increased padding to make buttons bigger */
+    font-size: 1.2rem; /* Larger font size */
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    width: 20%; /* Ensures the buttons are of equal size */
+}
+
+.submit-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.back-button {
+    background-color: #f44336;
+    color: white;
+}
+
+.submit-button:hover,
+.back-button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Disabled state */
+.submit-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Score display */
+.score-display {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Correct answer display */
+.correct-answer {
+    font-weight: bold;
+    margin-top: 5px;
+    color: #007bff;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Mobile (up to 600px) */
+@media (max-width: 480px) {
+    .quiz-container {
+        padding-top: 60px; /* Ensure content stays below navbar */
+        margin-top: 80px;  /* Added margin-top for mobile view */
+    }
+
+    .quiz-content {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .quiz-title-item {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .submit-button, .back-button {
+        width: 100%;
+        font-size: 16px;
+        padding: 14px;
+    }
+
+    .quiz-question {
+        padding: 12px;
+    }
+
+    .score-display {
+        font-size: 18px;
+    }
+}
+
+/* Tablet (601px - 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .quiz-container {
+        padding-top: 90px; /* Added margin-top for tablet view */
+        margin-top: 20px;  /* Added margin-top for tablet view */
+    }
+
+    .quiz-content {
+        width: 90%;
+        padding: 18px;
+    }
+
+    .quiz-title-item {
+        font-size: 16px;
+    }
+
+    .submit-button, .back-button {
+        font-size: 16px;
+    }
+}
+
+/* Desktop (1025px and above) */
+@media (min-width: 1025px) {
+    .quiz-container {
+        padding-top: 70px;
+    }
+
+    .quiz-content {
+        width: 75%;
+    }
+}

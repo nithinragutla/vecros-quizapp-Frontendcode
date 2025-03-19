@@ -1,0 +1,49 @@
+/* Light Mode (Default) */
+.light-mode {
+  /* background: linear-gradient(to right, #000000, #2c2c2c); */
+    background: linear-gradient(to right, #cca08e, #182848);
+    /* background: linear-gradient(to right, #fbbd69, #ff7f50); */
+
+    color: #000000;
+    transition: all 0.3s ease;
+  }
+  
+  /* Dark Mode */
+  .dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+    transition: all 0.3s ease;
+  }
+  
+  /* Button Styling */
+  .theme-toggle {
+    padding: 8px 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    font-weight: bold;
+  }
+  
+  /* Light Mode Button */
+  .light-mode-button {
+    background-color: #f0f0f0;
+    color: #000;
+    border: 2px solid #000;
+  }
+  
+  .light-mode-button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Dark Mode Button */
+  .dark-mode-button {
+    background-color: #333;
+    color: #fff;
+    border: 2px solid #fff;
+  }
+  
+  .dark-mode-button:hover {
+    background-color: #555;
+  }
+  
