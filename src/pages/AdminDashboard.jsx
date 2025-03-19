@@ -24,13 +24,13 @@ const AdminDashboard = () => {
             <div className="admin-container">
                 <div className="admin-card">
                     <h2 className="admin-heading">Welcome to Admin Dashboard</h2>
-                    <button className="admin-buttons" onClick={() => navigate("/AdminQuiz")}>
+                    <button className="admin-buttons" onClick={() => navigate("/AdminaddQuiz")}>
                         Add Quiz
                     </button>
-                    <button className="admin-buttons" onClick={() => navigate("/QuizList")}>
+                    <button className="admin-buttons" onClick={() => navigate("/AdminEdit")}>
                         view questions
                     </button>
-                    <button className="admin-buttons" onClick={() => navigate("/leaderboard")}>
+                    <button className="admin-buttons" onClick={() => navigate("/Leaderboard")}>
                         View Leaderboard
                     </button>
                 </div>
