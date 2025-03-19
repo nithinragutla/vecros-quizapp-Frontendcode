@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import "../styles/LandingPage.css";
+import "../styles/landingpage.css";
 
 const LandingPage = () => {
     const navigate = useNavigate();
