@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Adminnavbar from "../components/adminnav";
-import "../styles/AdminDashboard.css"; // Import CSS file
+import "../styles/Admindashboard.css"; 
 
 const AdminDashboard = () => {
     const navigate = useNavigate();
