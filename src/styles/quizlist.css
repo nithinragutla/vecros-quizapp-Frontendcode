@@ -29,7 +29,7 @@
     font-weight: bold;
     text-align: center;
     cursor: pointer;
-    color: #ffb700;
+    /* color: #ffb700; */
     margin-bottom: 10px;
   }
   
@@ -86,11 +86,11 @@
   }
   
   .edit-btn {
-    background-color: #ffc107;
+    background: linear-gradient(90deg,  #eac147 0%, #df7c0a 100%);
   }
   
   .delete-btn {
-    background-color: #dc3545;
+    background: linear-gradient(90deg, #ff512f 0%, #dd2476 100%);
     color: white;
   }
   
