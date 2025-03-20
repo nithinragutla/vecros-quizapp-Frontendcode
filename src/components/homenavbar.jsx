@@ -6,14 +6,19 @@ import "../styles/homenav.css"
 const HomeNavbar = () => {
     const navigate = useNavigate();
 
+    const handleLogout = () => {
+        localStorage.removeItem("token"); // ✅ Delete the token
+        navigate("/"); // ✅ Redirect to landing page or login page
+    };
+
     return (
         <nav className="Homenavbar">
             <h1 className="Navtitle" onClick={() => navigate("/Home")}>Home</h1>
             <div className="Navlinks">
                 <ThemeToggle/>
-                <button className="Navbutton logout" onClick={() => navigate("/")}>
-                    Logout
-                </button>
+                <button className="Navbutton logout" onClick={handleLogout}>
+            Logout
+        </button>
             </div>
         </nav>
     );

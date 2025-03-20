@@ -7,41 +7,54 @@ import UserQuiz from "./components/Userquiz";
 import AdminRegister from "./components/adminreg";
 import Register from "./components/Register";
 import Home from "./pages/Home";
-import HomeNavbar from "./components/homenavbar";
 import AdminDashboard from "./pages/AdminDashboard";
 import Leaderboard from "./components/Leaderboard";
 import AdminaddQuiz from "./components/adminaddquiz";
-import ProtectedRoute from "./components/ProtectedRoute"; // Import Protected Route
+
+// ✅ Check if user is authenticated
+const isAuthenticated = () => {
+    const token = localStorage.getItem("token");
+    return !!token;
+};
+
+// ✅ Protected Route Component
+function ProtectedRoute({ children }) {
+    return isAuthenticated() ? children : <Navigate to="/Login" />;
+}
 
 function App() {
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const [isLoggedIn, setIsLoggedIn] = useState(isAuthenticated());
 
     useEffect(() => {
-        const token = localStorage.getItem("authToken"); // Store auth token in localStorage after login
-        if (token) {
-            setIsAuthenticated(true);
-        }
+        const handleAuthChange = () => setIsLoggedIn(isAuthenticated());
+        window.addEventListener("storage", handleAuthChange);
+        return () => window.removeEventListener("storage", handleAuthChange);
     }, []);
+
+    // ✅ Apply theme
+    const savedTheme = localStorage.getItem("theme");
+    document.body.classList.add(savedTheme === "dark" ? "dark-mode" : "light-mode");
 
     return (
         <Router>
             <Routes>
-                <Route path="/Home" element={<Home />} />
-                <Route path="/HomeNavbar" element={<HomeNavbar />} />
-                <Route path="/login" element={<Login />} />
+                {/* Public Routes */}
+                <Route path="/Login" element={<Login />} />
                 <Route path="/Register" element={<Register />} />
                 <Route path="/AdminRegister" element={<AdminRegister />} />
-                <Route path="/Leaderboard" element={<Leaderboard />} />
                 <Route path="/" element={<LandingPage />} />
 
                 {/* Protected Routes */}
-                <Route path="/UserQuiz" element={<ProtectedRoute element={UserQuiz} isAuthenticated={isAuthenticated} />} />
-                <Route path="/AdminEdit" element={<ProtectedRoute element={AdminEdit} isAuthenticated={isAuthenticated} />} />
-                <Route path="/AdminaddQuiz" element={<ProtectedRoute element={AdminaddQuiz} isAuthenticated={isAuthenticated} />} />
-                <Route path="/AdminDashboard" element={<ProtectedRoute element={AdminDashboard} isAuthenticated={isAuthenticated} />} />
+                <Route path="/Home" element={<ProtectedRoute><Home /></ProtectedRoute>} />
+                <Route path="/Leaderboard" element={<ProtectedRoute><Leaderboard /></ProtectedRoute>} />
+                <Route path="/UserQuiz" element={<ProtectedRoute> <UserQuiz /></ProtectedRoute> } />
+                <Route path="/AdminEdit" element={<ProtectedRoute><AdminEdit /></ProtectedRoute>}/>
+                <Route path="/AdminaddQuiz" element={<ProtectedRoute><AdminaddQuiz /></ProtectedRoute>}/>
+                <Route path="/AdminDashboard" element={<ProtectedRoute><AdminDashboard /></ProtectedRoute>}/>
             </Routes>
         </Router>
     );
 }
 
+// ✅ Ensure a default export is present
 export default App;

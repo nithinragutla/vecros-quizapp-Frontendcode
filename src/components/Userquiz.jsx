@@ -85,7 +85,7 @@ const UserQuiz = () => {
         selectedAnswers: formattedAnswers,
       });
   
-      console.log("✅ API Response:", response.data); // Debugging Line
+      console.log(" API Response:", response.data); // Debugging Line
   
       setScore(response.data.score);
       setFeedback(response.data.feedback);
