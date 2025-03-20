@@ -34,14 +34,14 @@
 /* Button Styles */
 .admin-buttons {
     padding: 15px 30px;
-    background: linear-gradient(to right, #9b59b6, #6c5ce7);
+    background: linear-gradient(90deg, #ff512f 0%, #dd2476 100%);
     font-size: 1.2rem;
     font-weight: bold;
     margin: 10px 0;
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
-    border: 1px solid  #fff;
+    /* border: 1px solid  #fff; */
     width: 100%;
     max-width: 300px;
     text-align: center;

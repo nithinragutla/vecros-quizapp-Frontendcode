@@ -69,8 +69,8 @@
 /* Media Query for Mobile Devices (max-width: 480px) */
 @media (max-width: 480px) {
     .leaderboard-wrapper {
-        margin-top: 80px;
-        padding: 50px; /* Ensure padding is consistent */
+        margin-top: 150px;
+        padding: 10px; /* Ensure padding is consistent */
     }
 
     .leaderboard-headings {

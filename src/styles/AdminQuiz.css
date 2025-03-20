@@ -1,9 +1,9 @@
 /* Style for the main container */
 #admin-quiz-container {
-    max-width: 700px;
+    max-width: 800px;
     margin: 80px auto;
     padding: 10px;
-    background: #c3f6f06b;
+    /* background: #c3f6f06b; */
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -12,14 +12,14 @@
 #admin-quiz-container h2 {
     text-align: center;
     font-size: 1.8rem;
-    color: #333;
+    color: #eadede;
     margin-bottom: 20px;
 }
 
 /* Labels */
 #admin-quiz-container label {
     font-weight: bold;
-    color: #444;
+    /* color: #444444c1; */
     display: block;
     margin-bottom: 5px;
 }
@@ -41,7 +41,7 @@
     border: 1px solid #ddd;
     border-radius: 8px;
     margin-bottom: 15px;
-    background: #c3f6f06b;
+    background: linear-gradient(to right, #d3d3d3, #62717c);
 }
 
 /* Options Styling */
@@ -62,31 +62,34 @@
 
 /* Button Colors */
 .add-question-btn {
-    background: linear-gradient(to right, #df2326, #ff7f50);/* Blue */
+    background: linear-gradient(90deg, #1e3c72 0%, #2a5298 50%, #7635dc 100%);
     color: white;
 }
 
 .submit-btn {
-    background-color: #28a745; /* Green */
+   
+        background: linear-gradient(90deg, #a02b0e 0%, #feb47b 100%);
+    
+    /* Green */
     color: white;
 }
 
 .remove-btn {
-    background-color: #dc3545; /* Red */
+    background: linear-gradient(90deg, #ff512f 0%, #dd2476 100%);/* Red */
     color: white;
 }
 
 /* Button Hover Effects */
 .add-question-btn:hover {
-    background-color: #0056b3;
+    background: linear-gradient(90deg, #1e3c72 0%, #2a5298 50%, #7635dc 100%);
 }
 
 .submit-btn:hover {
-    background-color: #218838;
+    background: linear-gradient(90deg, #b34a30 0%, #feb47b 100%);
 }
 
 .remove-btn:hover {
-    background-color: #c82333;
+    background: linear-gradient(90deg, #ff512f 0%, #dd2476 100%);
 }
 
 /* Add gap between Correct Answer field and Remove button */
