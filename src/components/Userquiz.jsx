@@ -79,7 +79,7 @@ const UserQuiz = () => {
         selectedAnswer: Array.isArray(selectedAnswer) ? selectedAnswer : [selectedAnswer],
       }));
   
-      const response = await axios.post("http://localhost:5000/api/score/submit", {
+      const response = await axios.post("https://vecros-quiztask-backendcode.vercel.app/api/score/submit", {
         userId: user._id,
         quizTitle: selectedTitle,
         selectedAnswers: formattedAnswers,
