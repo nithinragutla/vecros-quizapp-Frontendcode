@@ -54,7 +54,7 @@ const AdminRegister = () => {
                     <button type="submit" className="admin-register-button">Register as Admin</button>
                 </form>
 
-                <p>Already an admin? <a href="/AdminLogin">Log in</a></p>
+                <p>Already an admin? <a href="/Login">Log in</a></p>
             </div>
         </div>
     );
